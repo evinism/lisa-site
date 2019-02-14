@@ -1,0 +1,103 @@
+body {
+    font-family: 'Arvo', serif;
+    text-align: center;
+}
+
+article {
+    width: 500px;
+    margin: 75px auto 0 auto;
+    background: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+article > img {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+}
+
+h2 {
+    border-bottom: 3px black solid;
+    display: inline-block;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+}
+
+.life-event {
+    height: 80px;
+    width: 30%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.life-event::after {
+    content: '';
+    border-bottom: 2px lightgray solid;
+    width: 50%;
+}
+
+.life-event:nth-child(even) {
+    border-right: 3px solid black;
+    margin-left: 20%;
+}
+
+.life-event:nth-child(odd) {
+    border-left: 3px solid black;
+    margin-left: 50%;
+    flex-direction: row-reverse;
+}
+
+.life-event:nth-child(even)::after {
+    margin-left: 10px;
+}
+
+.life-event:nth-child(odd)::after {
+    margin-right: 10px;
+}
+
+
+.life-event.future {
+    border-color: lightgray;
+}
+
+
+.life-event.future:nth-child(even) {
+    border-right-style: dotted;
+
+}
+
+.life-event.future:nth-child(odd) {
+    border-left-style: dotted;
+}
+
+.life-event.future::after {
+    border-bottom-style: dotted;
+}
+
+
+.future-divider {
+    padding: 10px;
+    display: inline-block;
+    border-top: 3px black solid;
+    border-bottom: 3px lightgray dotted;
+}
+
+.end-of-world {
+    display: inline-block;
+    padding: 10px;
+    border-top: 3px lightgray dotted;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: darkgreen;
+    color: white;
+}
